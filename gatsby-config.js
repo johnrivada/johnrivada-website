@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: "John Rivada",
-    description: "buttums",
+    description: "Unscripted, unfiltered, unsupervised and (probably) unread",
     author: "John Rivada",
   },
   plugins: [

@@ -7,7 +7,7 @@ const About = () => {
         <Layout>
             <Metadata title="About" description="This is my home page" />
             <h1>About Page </h1>
-            <p>This is where I talk about me</p>
+            <p>Tthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuff this is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuff this is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuff this is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuff this is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuff this is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuff this is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuff this is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuff this is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuff this is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuffthis is me adding stuff</p>
         </Layout>
     )
 }

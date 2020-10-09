@@ -18,40 +18,37 @@ const Header = () => {
   )
   return (
     <header className={headerStyles.header}>
-      <div className={headerStyles.overlay}></div>
-      <div className={headerStyles.heroContent}>
-        <p className={headerStyles.brand}>
-          <Link to="/">{data.site.siteMetadata.title}</Link>
-        </p>
-        <p className={headerStyles.description}>
-          {data.site.siteMetadata.description}
-        </p>
-      </div>
       <nav className={headerStyles.navContainer}>
-      <ul className={headerStyles.navList}>
-            <li>
-                <Link to="/" activeClassName={headerStyles.activeMenuItem}>
-                Home
+        <ul className={headerStyles.navList}>
+          <li className={headerStyles.link} >
+            <h1 className={headerStyles.brand}>
+              <Link to="/">{data.site.siteMetadata.title}</Link>
+            </h1>
+          </li>
+          <li>
+            <Link to="/" className={headerStyles.link} activeClassName={headerStyles.activeMenuItem}>
+              Home
                 </Link>
-            </li>
-            <li>
-                <Link to="/blog/" activeClassName={headerStyles.activeMenuItem}>
-                Blog
+          </li>
+          <li>
+            <Link to="/blog/" className={headerStyles.link} activeClassName={headerStyles.activeMenuItem}>
+              Blog
                 </Link>
-            </li>
-            <li>
-                <Link to="/contact/" activeClassName={headerStyles.activeMenuItem}>
-                Contact
+          </li>
+          <li>
+            <Link to="/contact/" className={headerStyles.link} activeClassName={headerStyles.activeMenuItem}>
+              Contact
                 </Link>
-            </li>
-            <li>
-                <Link to="/about/" activeClassName={headerStyles.activeMenuItem}>
-                About
+          </li>
+          <li>
+            <Link to="/about/" className={headerStyles.link} activeClassName={headerStyles.activeMenuItem}>
+              About
                 </Link>
-            </li>
-            </ul>
+          </li>
+
+        </ul>
       </nav>
-      </header>
+    </header>
   )
 }
 

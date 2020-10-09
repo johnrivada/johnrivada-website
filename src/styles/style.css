@@ -1,32 +1,37 @@
 * {
-  min-width: 50vw;
+  margin: 0 auto;
 }
 
-@media screen and (min-width: 960px) {
-  html {
-      margin-left: calc(100vw - 100%);
-      margin-right: 0;
-      background-color: red;
-  }
-}
-
-// Demo CSS --------------------------
 html {
   font-family: Avenir Next, Helvetica Neue, sans-serif;
-  background: #333;
+  /* background: white; */
   overflow: auto;
+  font-size: 18px;
+	padding: 1rem;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  
-  padding: 1em 2em;
-  background: hsl(0, 0, 95%);
-  max-width: 50vw;
-  margin: 15vh auto;
-  
+  max-width: 65rem;
+}
+
+a, a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 1238px) {
+  html {
+      margin-left: calc(100vw - 100%);
+      margin-right: 0;
+  }
+}
+
+
+@media (max-width: 960px) and (orientation: portrait) {
+  html {
+      /* background-color: purple; */
+  }
 }

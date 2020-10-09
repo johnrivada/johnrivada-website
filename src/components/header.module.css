@@ -1,38 +1,43 @@
 .header {
 
-  }
-  
-.hero-content {
-
 }
-  
 .brand {
-
+  display: inline-block;
+	margin-right: 1rem;
+  margin: 0;
+  color: black;
+	text-decoration: none;
 }
 
-.brand a {
-}
-  
-.description {
-}
-  
 .nav-container {
 }
   
 .nav-list {
+  list-style: none;
+  display: inline-block;
+	margin: 0;
+	margin-bottom: 2.25rem;
+  padding: 0;
 }
 
 .nav-list li {
-}
-  
-.nav-list a {
-}
-
-.nav-list a:hover {
-}
-
-.overlay {
+  display: inline-block;
+  margin-right: 1rem;
 }
 
 .active-menu-item {
+  text-decoration: underline;
+}
+
+@media all and (max-width: 500px) {  
+    
+  .nav-list {  
+    display: flex;
+    flex-wrap: wrap;  
+  }  
+    
+  .nav-list > li {  
+    flex-basis: 100%;  
+  }
+
 }

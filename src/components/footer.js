@@ -18,9 +18,10 @@ const Footer = () => {
   return (
   <footer className={footerStyles.siteFooter}>
     <div className={footerStyles.container}>
-       <p>
-          Site developed by {data.site.siteMetadata.author} &copy;{" "}
-          {new Date().getFullYear().toString()}{" "}
+       <p> <a href="#">Back to top</a>{" · "}
+       &copy;{" "}
+       {new Date().getFullYear().toString()}{" "}
+       {data.site.siteMetadata.author} 
         </p>
    </div>
   </footer>

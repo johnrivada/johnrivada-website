@@ -4,6 +4,8 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Metadata from "../components/metadata"
 
+import blogStyles from "../components/blog.module.css"
+
 const Blog = () => {
   const data = useStaticQuery(
     graphql`
@@ -14,12 +16,14 @@ const Blog = () => {
               frontmatter {
                 title
                 date(formatString: "DD MMMM, YYYY")
+                tags
               }
               timeToRead
               excerpt
               id
               fields {
                 slug
+                slugDate
               }
             }
           }
@@ -29,31 +33,32 @@ const Blog = () => {
   )
   return (
     <Layout>
-        <Metadata title="Blog" description="This is my home page" />
-      <ul>
-        {data.allMarkdownRemark.edges.map(edge => {
-          return (
-            <li key={edge.node.id}>
-              <h2>
-                <Link to={`/blog/${edge.node.fields.slug}/`}>
-                    {edge.node.frontmatter.title}
-                </Link>
-              </h2>
-              <div>
-                <span>
-                  Posted on {edge.node.frontmatter.date} <span> / </span>{" "}
-                  {edge.node.timeToRead} min read
-                </span>
+      <Metadata title="Blog" description="This is my home page" />
+      <h1>Latest Posts</h1>
+      <p> Unscripted, unfiltered, unsupervised and (probably) unread rants about myself and my happenings.</p>
+      {data.allMarkdownRemark.edges.map(edge => {
+        return (
+          <div className={blogStyles.blogPost} key={edge.node.id}>
+            <div className={blogStyles.contain + " " + blogStyles.sticky + " " + blogStyles.baseline}>
+              <header>
+                <div>
+                  <h2 className={blogStyles.blogTitle}> <Link to={`/blog/${edge.node.fields.slugDate}/${edge.node.fields.slug}/`}> {edge.node.frontmatter.title} </Link> </h2>
+                  <time> {edge.node.frontmatter.date} </time>
+                  <div class={blogStyles.tag}>
+                    {edge.node.frontmatter.tags.map(tag => {
+                      return (<span>/ {tag} </span>)
+                    })} /
+                  </div>
+                </div>
+              </header>
+              <div className={blogStyles.blogExcerpt}>
+                {edge.node.excerpt}
               </div>
-              <p>{edge.node.excerpt}</p>
-              <div>
-                <Link to={`/blog/${edge.node.fields.slug}/`}>Read More</Link>
-              </div>
-            </li>
-          )
-        })}
-      </ul>
-    </Layout>
+            </div>
+          </div >
+        )
+      })}
+    </Layout >
   )
 }
 

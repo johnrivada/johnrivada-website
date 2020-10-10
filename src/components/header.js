@@ -20,31 +20,40 @@ const Header = () => {
     <header className={headerStyles.header}>
       <nav className={headerStyles.navContainer}>
         <ul className={headerStyles.navList}>
-          <li className={headerStyles.link} >
-            <h1 className={headerStyles.brand}>
-              <Link to="/">{data.site.siteMetadata.title}</Link>
-            </h1>
-          </li>
+          <h1 className={headerStyles.title}>
+            {data.site.siteMetadata.title}
+          </h1>
           <li>
-            <Link to="/" className={headerStyles.link} activeClassName={headerStyles.activeMenuItem}>
+            <Link to="/" activeClassName={headerStyles.activeMenuItem}>
               Home
                 </Link>
           </li>
           <li>
-            <Link to="/blog/" className={headerStyles.link} activeClassName={headerStyles.activeMenuItem}>
+            <Link to="/blog/" activeClassName={headerStyles.activeMenuItem}>
               Blog
                 </Link>
           </li>
           <li>
-            <Link to="/contact/" className={headerStyles.link} activeClassName={headerStyles.activeMenuItem}>
-              Contact
+            <Link to="/WAI/" activeClassName={headerStyles.activeMenuItem}>
+              WAI_?
                 </Link>
           </li>
           <li>
-            <Link to="/about/" className={headerStyles.link} activeClassName={headerStyles.activeMenuItem}>
+            <Link to="/about/" activeClassName={headerStyles.activeMenuItem}>
+              Gaming
+                </Link>
+          </li>
+          <li>
+            <Link to="/about/" activeClassName={headerStyles.activeMenuItem}>
+              Programming
+                </Link>
+          </li>
+          <li>
+            <Link to="/about/" activeClassName={headerStyles.activeMenuItem}>
               About
                 </Link>
           </li>
+
 
         </ul>
       </nav>

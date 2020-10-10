@@ -1,16 +1,12 @@
-.header {
 
-}
-.brand {
+.title {
   display: inline-block;
 	margin-right: 1rem;
-  margin: 0;
   color: black;
-	text-decoration: none;
+  text-decoration: none;
+  font-size: 200%;
 }
 
-.nav-container {
-}
   
 .nav-list {
   list-style: none;
@@ -23,21 +19,30 @@
 .nav-list li {
   display: inline-block;
   margin-right: 1rem;
+  font-size: 120%;
 }
 
 .active-menu-item {
   text-decoration: underline;
 }
 
-@media all and (max-width: 500px) {  
+@media all and (max-width: 600px) {  
     
+  .title {
+    min-width: 100%;
+    text-align: center
+  }
   .nav-list {  
     display: flex;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
+    
+    margin-bottom: 1rem;
   }  
     
-  .nav-list > li {  
+  .nav-list > li {
+    font-size: 150%;  
     flex-basis: 100%;  
+    text-align: center;
   }
 
 }

@@ -16,15 +16,15 @@ const Footer = () => {
   )
 
   return (
-  <footer className={footerStyles.siteFooter}>
-    <div className={footerStyles.container}>
-       <p> <a href="#">Back to top</a>{" · "}
-       &copy;{" "}
-       {new Date().getFullYear().toString()}{" "}
-       {data.site.siteMetadata.author} 
+    <footer className={footerStyles.siteFooter}>
+      <div className={footerStyles.container}>
+        <p>
+          &copy;{" "}
+          {new Date().getFullYear().toString()}{" "}
+          {data.site.siteMetadata.author}
         </p>
-   </div>
-  </footer>
+      </div>
+    </footer>
   )
 }
 

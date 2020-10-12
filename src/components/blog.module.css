@@ -4,6 +4,12 @@
     margin-top: 3rem;
     font-size: 30px;
 }
+
+
+.blogTitleContainer {
+    width: 100%;
+}
+
 .blogTitle {
     margin: 0;
     text-align: left;

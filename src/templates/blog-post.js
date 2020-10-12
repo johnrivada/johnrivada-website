@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Metadata from "../components/metadata"
-import blogStyles from "../components/blog.module.css"
 
 export const query = graphql`
   query($slug: String!) {

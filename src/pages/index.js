@@ -3,6 +3,9 @@ import Layout from "../components/layout"
 import Metadata from "../components/metadata"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
+
+import blogStyles from "../components/blog.module.css"
+
 const Index = () => {
 
   const data = useStaticQuery(
@@ -17,7 +20,7 @@ const Index = () => {
                 tags
               }
               timeToRead
-              excerpt
+              excerpt  (pruneLength: 500)
               id
               fields {
                 slug
@@ -50,16 +53,13 @@ const Index = () => {
         <div>
           <span> {data.allMarkdownRemark.edges[0].node.frontmatter.date} </span>
           <br />
-          {data.allMarkdownRemark.edges[0].node.frontmatter.tags.map(tag => {
-            return (<span class="tag"> / {tag} </span>)
-          })}
-          <span class="tag">/</span>
+          <div class={blogStyles.tag}>
+                    {data.allMarkdownRemark.edges[0].node.frontmatter.tags.map(tag => {
+                      return (<span>/ {tag} </span>)
+                    })} /
+                  </div>
         </div>
         <p>{data.allMarkdownRemark.edges[0].node.excerpt}</p>
-        <br />
-        <div>
-          <Link to={`/blog/${data.allMarkdownRemark.edges[0].node.fields.slugDate}/${data.allMarkdownRemark.edges[0].node.fields.slug}`}>Read More</Link>
-        </div>
       </div>
 
     </Layout>

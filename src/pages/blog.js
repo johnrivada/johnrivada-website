@@ -19,7 +19,7 @@ const Blog = () => {
                 tags
               }
               timeToRead
-              excerpt
+              excerpt (pruneLength: 500)
               id
               fields {
                 slug
@@ -40,7 +40,7 @@ const Blog = () => {
         return (
           <div className={blogStyles.blogPost} key={edge.node.id}>
             <div className={blogStyles.contain + " " + blogStyles.sticky + " " + blogStyles.baseline}>
-              <header>
+              <header className={blogStyles.blogTitleContainer}>
                 <div>
                   <h2 className={blogStyles.blogTitle}> <Link to={`/blog/${edge.node.fields.slugDate}/${edge.node.fields.slug}/`}> {edge.node.frontmatter.title} </Link> </h2>
                   <time> {edge.node.frontmatter.date} </time>
